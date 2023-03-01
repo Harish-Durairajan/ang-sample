@@ -4,8 +4,8 @@ pipeline {
         stage("pulling the source"){
             steps{
                 sh git init
-		        sh git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"
-		        sh git pull origin master
+		sh git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"
+		sh git pull origin master
 		 
             }
         }
@@ -14,14 +14,14 @@ pipeline {
                 sh clean wsl
             }
         }
-	    stage("pulling latest source"){
+	stage("pulling latest source"){
             steps{
                 sh git pull origin master
             }
         }        
         stage("building the angular application"){
             steps{
-		        sh ng build                
+		sh ng build                
             }
         }
         stage("pushing s3 bucket"){
