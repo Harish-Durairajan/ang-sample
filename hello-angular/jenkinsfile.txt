@@ -4,7 +4,7 @@ pipeline {
         string name:'git_url', description: 'Please enter the repository url'
         string name: 's3_bucket_name', description: 'Please enter the S3 bucket value'
         // defaultValue:'https://github.com/Harish-Durairajan/ang-sample.git'
-        // defaultValue:'dummybucket-jenkins'
+        // defaultValue:'dummybucket-jenkins..'
     }
     stages{
 	stage("clearing the workspace"){
