@@ -4,7 +4,6 @@ pipeline {
         string description: 'Please enter the repository url', name: 'Git-url'
         string description: 'Please enter the S3 bucket value', name: 'S3-bucket-name'
     }
-    
     stages{
 	stage("clearing the workspace"){
             steps{
@@ -15,10 +14,6 @@ pipeline {
             steps{
 		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
     		userRemoteConfigs: [[url: "${params.Git-url}"]]])
-                
-		// 'git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"'
-		
-		 
             }
         }
 	stage("pulling latest source"){
@@ -34,7 +29,7 @@ pipeline {
         }
         stage("pushing s3 bucket"){
             steps{
-              sh "aws s3 cp /hello-angular s3://${S3-bucket-name} --recursive"
+              sh "aws s3 cp hello-angular/src/index.html s3://${S3-bucket-name} --recursive"
             }
         }      
 
