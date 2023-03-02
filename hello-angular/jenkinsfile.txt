@@ -22,11 +22,11 @@ pipeline {
 		//sh "ng build"
             //}
         //}
-        stage("pushing s3 bucket"){
-            steps{
-              sh "aws s3 cp /hello-angular/src/index.html s3://${S3-bucket-name} --recursive"
-            }
-        }      
+        //stage("pushing s3 bucket"){
+            //steps{
+              //sh "aws s3 cp /hello-angular/src/index.html s3://${S3-bucket-name} --recursive"
+            //}
+        //}      
 
     }
 }
