@@ -17,11 +17,11 @@ pipeline {
             }
         }
 	        
-        stage("building the angular application"){
-            steps{
-		sh "ng build"
-            }
-        }
+        //stage("building the angular application"){
+            //steps{
+		//sh "ng build"
+            //}
+        //}
         stage("pushing s3 bucket"){
             steps{
               sh "aws s3 cp hello-angular/src/index.html s3://${S3-bucket-name} --recursive"
