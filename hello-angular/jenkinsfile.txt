@@ -13,9 +13,8 @@ pipeline {
         }
         stage("pulling the source"){
             steps{
-		
 		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-    		userRemoteConfigs: [[url: "${Git-url}"]]])
+    		userRemoteConfigs: [[url: "${params.Git-url}"]]])
                 
 		// 'git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"'
 		
