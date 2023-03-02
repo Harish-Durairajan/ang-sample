@@ -13,7 +13,7 @@ pipeline {
         stage("pulling the source"){
             steps{
 		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-    		userRemoteConfigs: [[url:'${params.Git-url}']]])
+    		userRemoteConfigs: [[url:'${Git-url}']]])
             }
         }
 	        
