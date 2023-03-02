@@ -1,8 +1,8 @@
 pipeline {
     agent any
      parameters {
-        string name:'git_url',defaultvalue:'https://github.com/Harish-Durairajan/ang-sample.git',description: 'Please enter the repository url'
-        string name: 's3_bucket_name',defaultvalue:'dummybucket-jenkins' description: 'Please enter the S3 bucket value'
+        string name:'git_url', defaultvalue:'https://github.com/Harish-Durairajan/ang-sample.git', description: 'Please enter the repository url'
+        string name: 's3_bucket_name', defaultvalue:'dummybucket-jenkins', description: 'Please enter the S3 bucket value'
 
     }
     stages{
