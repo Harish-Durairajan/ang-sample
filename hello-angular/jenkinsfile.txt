@@ -15,7 +15,7 @@ pipeline {
         stage("pulling the source"){
             steps{
 		checkout scmGit(branches: [[name: '*/master']], 
-                userRemoteConfigs: [[url: '${git_url}']]) 
+                userRemoteConfigs: [[url: '${Git_url}']]) 
 		//checkout([$class: 'GitSCM', branches: [[name: '*/master']],
     		//userRemoteConfigs: [[url:'${params.Git-url}']]])
             }
