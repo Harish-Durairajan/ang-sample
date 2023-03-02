@@ -24,7 +24,7 @@ pipeline {
 	        
         stage("building the angular application"){
             steps{
-                 sh "cd workspace/sample/hello-angular"
+                 sh "cd sample/hello-angular"
               
 	         sh "ng build"
             }
