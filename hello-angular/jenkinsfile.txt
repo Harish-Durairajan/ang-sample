@@ -24,7 +24,8 @@ pipeline {
 	        
         stage("building the angular application"){
             steps{
-                 sh "cd /mnt/e/ang/hello-angular"
+                 sh "cd //wsl.localhost/Ubuntu-20.04/home/harish/.jenkins/workspace/sample/hello-angular"
+               
 	         sh "ng build"
             }
         }
