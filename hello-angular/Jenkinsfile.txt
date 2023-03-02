@@ -10,7 +10,8 @@ pipeline {
         }
         stage("clearing the workspace"){
             steps{
-                sh "cleanWs()"
+                sh "cleanWs()" 
+
             }
         }
 	stage("pulling latest source"){
