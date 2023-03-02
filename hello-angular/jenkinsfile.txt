@@ -16,12 +16,7 @@ pipeline {
     		userRemoteConfigs: [[url: "${params.Git-url}"]]])
             }
         }
-	stage("pulling latest source"){
-            steps{
-		sh "git init"
-                sh "git pull origin master"
-            }
-        }        
+	        
         stage("building the angular application"){
             steps{
 		sh "ng build"
