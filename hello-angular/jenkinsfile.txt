@@ -1,9 +1,10 @@
 pipeline {
     agent any
      parameters {
-        string name:'git_url', defaultValue:'https://github.com/Harish-Durairajan/ang-sample.git', description: 'Please enter the repository url'
-        string name: 's3_bucket_name', defaultValue:'dummybucket-jenkins', description: 'Please enter the S3 bucket value'
-
+        string name:'git_url', description: 'Please enter the repository url'
+        string name: 's3_bucket_name', description: 'Please enter the S3 bucket value'
+        // defaultValue:'https://github.com/Harish-Durairajan/ang-sample.git'
+        // defaultValue:'dummybucket-jenkins'
     }
     stages{
 	stage("clearing the workspace"){
