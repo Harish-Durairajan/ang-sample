@@ -24,7 +24,7 @@ pipeline {
 	        
         stage("building the angular application"){
             steps{
-   		 sh "echo $(pwd)"
+   		 sh "echo $PWD"
                  sh "cd sample/hello-angular"
               
 	         sh "ng build"
