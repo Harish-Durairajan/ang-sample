@@ -1,8 +1,8 @@
 pipeline {
     agent any
      parameters {
-        //string name:'git_url', description: 'Please enter the repository url'
-        //string name: 's3_bucket_name', description: 'Please enter the S3 bucket value'
+        string name:'git_url', description: 'Please enter the repository url'
+        string name: 's3_bucket_name', description: 'Please enter the S3 bucket value'
     }
     stages{
 	stage("clearing the workspace"){
