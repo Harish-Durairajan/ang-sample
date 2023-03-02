@@ -12,6 +12,7 @@ pipeline {
  
             }
         }
+
         stage("pulling the source"){
             steps{
 		checkout scmGit(branches: [[name: '*/master']], 
@@ -23,14 +24,15 @@ pipeline {
 	        
         stage("building the angular application"){
             steps{
-		sh "ng build"
+	         sh "ng build"
             }
         }
-        //stage("pushing s3 bucket"){
-            //steps{
-              //sh "aws s3 cp hello-angular/src/index.html s3://${s3_bucket_name} --recursive"
-            //}
-        //}      
+
+        stage("pushing s3 bucket"){
+            steps{
+              sh "aws s3 cp hello-angular/src/index.html s3://${s3_bucket_name} --recursive"
+            }
+        }      
 
     }
 }
