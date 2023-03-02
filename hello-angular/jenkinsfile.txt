@@ -6,11 +6,11 @@ pipeline {
     }
     
     stages{
-	stage("clearing the workspace"){
-            steps{
-                sh "cleanWs()"
-            }
-        }
+	//stage("clearing the workspace"){
+            //steps{
+                //sh "cleanWs()"
+            //}
+        //}
         stage("pulling the source"){
             steps{
                 sh "git init"
