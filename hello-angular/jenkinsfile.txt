@@ -15,7 +15,7 @@ pipeline {
             steps{
 		sh cleanWs()
 		checkout([$class: 'GitSCM', branches: [[name: '*/master']],
-    		userRemoteConfigs: [[url: "${Git url}"]]])
+    		userRemoteConfigs: [[url: "${Git-url}"]]])
                 
 		//sh 'git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"'
 		
