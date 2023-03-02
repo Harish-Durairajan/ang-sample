@@ -11,7 +11,7 @@ pipeline {
         }
         stage("clearing the workspace"){
             steps{
-                sh "clean wsl"
+                sh "cleanWs()"
             }
         }
 	stage("pulling latest source"){
