@@ -24,6 +24,7 @@ pipeline {
 	        
         stage("building the angular application"){
             steps{
+                 cd /mnt/e/ang/hello-angular
 	         sh "ng build"
             }
         }
