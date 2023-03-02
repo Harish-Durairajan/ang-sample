@@ -1,21 +1,22 @@
 pipeline {
     agent any
      parameters {
-        string defaultValue: 'Git url', description: 'Please enter the repository url', name: 'Harish'
-        string defaultValue: 'S3 bucket', description: 'Please enter the S3 bucket value', name: 'Harish'
+        string description: 'Please enter the repository url', name: 'Git url'
+        string description: 'Please enter the S3 bucket value', name: 'S3 bucket name'
     }
+    
     stages{
+	stage("clearing the workspace"){
+            steps{
+                sh cleanWs()
+            }
+        }
         stage("pulling the source"){
             steps{
                 sh "git init"
 		sh 'git remote add origin "https://github.com/Harish-Durairajan/AngularSample.git"'
 		sh "git pull origin master"
 		 
-            }
-        }
-        stage("clearing the workspace"){
-            steps{
-                sh cleanWs()
             }
         }
 	stage("pulling latest source"){
