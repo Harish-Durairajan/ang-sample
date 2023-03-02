@@ -1,9 +1,9 @@
 pipeline {
     agent any
      parameters {
-        string description: 'Please enter the repository url', name: 'Git_url'
+        string name:'git_url', description: 'Please enter the repository url'
         
-        string description: 'Please enter the S3 bucket value', name: 'S3-bucket-name'
+        string name: 'S3-bucket-name', description: 'Please enter the S3 bucket value'
     }
     stages{
 	stage("clearing the workspace"){
@@ -15,7 +15,7 @@ pipeline {
         stage("pulling the source"){
             steps{
 		checkout scmGit(branches: [[name: '*/master']], 
-                userRemoteConfigs: [[url: '${Git_url}']]) 
+              userRemoteConfigs: [[url: '${git_url}']])
 		//checkout([$class: 'GitSCM', branches: [[name: '*/master']],
     		//userRemoteConfigs: [[url:'${params.Git-url}']]])
             }
