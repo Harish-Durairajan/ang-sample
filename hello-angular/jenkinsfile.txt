@@ -28,7 +28,7 @@ pipeline {
         //}
         stage("pushing s3 bucket"){
             steps{
-              sh "aws s3 cp /hello-angular/src/index.html s3://${s3_bucket_name} --recursive"
+              sh "aws s3 cp hello-angular/src/index.html s3://${s3_bucket_name} --recursive"
             }
         }      
 
