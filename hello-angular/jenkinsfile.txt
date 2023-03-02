@@ -1,7 +1,7 @@
 pipeline {
     agent any
      parameters {
-        string description: 'Please enter the repository url', name: 'Git-url'
+        string description: 'Please enter the repository url', name: 'Git_url'
         
         string description: 'Please enter the S3 bucket value', name: 'S3-bucket-name'
     }
