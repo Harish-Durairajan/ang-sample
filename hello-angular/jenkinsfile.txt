@@ -22,14 +22,14 @@ pipeline {
             }
         }
 	        
-        stage("building the angular application"){
-            steps{
-   		 sh "echo $PWD"
-                 sh "cd sample/hello-angular"
+        // stage("building the angular application"){
+        //     steps{
+   		//  sh "echo $PWD"
+        //          sh "cd sample/hello-angular"
               
-	         sh "ng build"
-            }
-        }
+	    //      sh "ng build"
+        //     }
+        // }
 
         stage("pushing s3 bucket"){
             steps{
