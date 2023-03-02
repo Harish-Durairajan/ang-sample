@@ -15,8 +15,7 @@ pipeline {
         }
         stage("clearing the workspace"){
             steps{
-                sh "rm -r sample"
-		sh "rm -r sample@tmp"
+                sh cleanWs()
             }
         }
 	stage("pulling latest source"){
