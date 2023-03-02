@@ -1,5 +1,9 @@
 pipeline {
     agent any
+     parameters {
+        string defaultValue: 'Git url', description: 'Please enter the repository url', name: 'Harish'
+        string defaultValue: 'S3 bucket', description: 'Please enter the S3 bucket value', name: 'Harish'
+    }
     stages{
         stage("pulling the source"){
             steps{
